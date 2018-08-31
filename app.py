@@ -40,10 +40,10 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    if event.massage.text == 'あ':
-        line_bot_api.reply_massage(
+    if event.message.text == 'あ':
+        line_bot_api.reply_message(
             event.reply_token,
-            TextSendMassage(text='いう'))
+            TextSendMessage(text='いう'))
     else:
         line_bot_api.reply_message(
             event.reply_token,
